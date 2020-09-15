@@ -1,12 +1,16 @@
 # Vendor
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from django.shortcuts import get_object_or_404
-from django.shortcuts import redirect
+from django.shortcuts import get_object_or_404, redirect, render
 # Local
 from .validators import validate_link
 from .utils import generate_token
 from .models import ShortLink
+
+
+def index(request):
+    """Главная страница"""
+    return render(request, 'index.html')
 
 
 @api_view(['GET'])

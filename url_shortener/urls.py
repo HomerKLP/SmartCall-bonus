@@ -5,6 +5,7 @@ from django.urls import path
 from .myapp import views
 
 urlpatterns = [
+    path('', views.index, name='index'),
     path('admin/', admin.site.urls),
     path('generate-link/',
          views.generate_link,
