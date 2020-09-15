@@ -10,7 +10,7 @@ urlpatterns = [
     path('generate-link/',
          views.generate_link,
          name='generate-link'),
-    path('goto/<str:token>',
+    path('<str:token>',
          views.goto,
          name='goto')
 
